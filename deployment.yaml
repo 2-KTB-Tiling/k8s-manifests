@@ -39,9 +39,9 @@ metadata:
 spec:
   type: LoadBalancer  # 외부 접근 가능하게 설정
   ports:
-- port: 80
-  targetPort: 80
-- port: 3000
-  targetPort: 3000
-- port: 8000
-  targetPort: 8000
+    - port: 80
+      targetPort: 80
+    - port: 3000
+      targetPort: 3000
+    - port: 8000
+      targetPort: 8000
