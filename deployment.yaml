@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: ai
-        image: luckyprice1103/tiling-ai-server:v1.12
+        image: luckyprice1103/tiling-ai-server:v1.13
         ports:
         - containerPort: 8000
 
