@@ -19,12 +19,6 @@ spec:
         image: luckyprice1103/tiling-backend:latest
         ports:
         - containerPort: 3000   # ✅ 컨테이너 내부에서 사용하는 포트
-        env:
-        - name: JWT_SECRET
-          valueFrom:
-            secretKeyRef:
-              name: backend-secret
-              key: JWT_SECRET
 ---
 apiVersion: v1
 kind: Service
