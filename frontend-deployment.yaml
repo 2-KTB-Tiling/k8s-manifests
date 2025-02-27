@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: luckyprice1103/tiling-frontend:v1.24
+        image: luckyprice1103/tiling-frontend:v1.25
         ports:
         - containerPort: 80
 ---
