@@ -38,6 +38,8 @@ metadata:
   name: app-service
 spec:
   type: LoadBalancer  # 외부 접근 가능하게 설정
+  selector:
+    app: app  # Deployment의 labels과 일치해야 함
   ports:
     - port: 80
       targetPort: 80
