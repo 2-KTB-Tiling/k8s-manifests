@@ -30,7 +30,7 @@ spec:
         image: luckyprice1103/tiling-frontend:v1.26
         ports:
         - containerPort: 80
---
+---
 
 apiVersion: v1
 kind: Service
