@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: ai
-        image: luckyprice1103/tiling-ai-server
+        image: luckyprice1103/tiling-ai-server:latest
         ports:
         - containerPort: 5000   # ✅ 컨테이너 내부에서 사용하는 포트
 
