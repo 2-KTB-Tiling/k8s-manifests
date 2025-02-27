@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: backend
-        image: luckyprice1103/tiling-backend:v1.1
+        image: luckyprice1103/tiling-backend:v1.2
         ports:
         - containerPort: 3000   # ✅ 컨테이너 내부에서 사용하는 포트
 ---
