@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app
+  labels:
+    app: app
+spec:
+  revisionHistoryLimit: 3
+  replicas: 1  # 하나의 Pod에서 3개의 컨테이너 실행
+  selector:
+    matchLabels:
+      app: app
+  template:
+    metadata:
+      labels:
+        app: app
+    spec:
+      containers:
+      - name: ai
+        image: luckyprice1103/tiling-ai-server:v1.7
+        ports:
+        - containerPort: 8000
+
+      - name: backend
+        image: luckyprice1103/tiling-backend:v1.3
+        ports:
+        - containerPort: 3000
+
+      - name: frontend
+        image: luckyprice1103/tiling-frontend:v1.26
+        ports:
+        - containerPort: 80
+--
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: app-service
+spec:
+  type: LoadBalancer  # 외부 접근 가능하게 설정
+  ports:
+  - port: 80
+    targetPort: 80
+  selector:
+    app: app
