@@ -22,7 +22,7 @@ spec:
         - containerPort: 8000
 
       - name: backend
-        image: luckyprice1103/tiling-backend:v1.6
+        image: luckyprice1103/tiling-backend:v1.7
         ports:
         - containerPort: 3000
 
